@@ -344,13 +344,21 @@ function updateList(link){
         if (http.readyState === 4 && http.status === 200) {
             var resp = JSON.parse(http.response);
             console.log(resp);
-            if( listaCriada == false){
+            if(listaCriada == false){
                 listaCriada = true;
                 createList(resp);
-                console.log("listaCriada == false")
             }else{
-                removeList;
-                console.log("chamou o removeList")
+               var qtdRows = document.getElementById("lista").rows.length;
+               console.log("qtdRows: "+qtdRows);
+
+               /*
+               * CONSEGUI, MEU BRASILLLLLLL - by Vaneska SOUSAAAAAAA as 00:33 do dia 28/08/2021
+               */
+               for(contador = qtdRows-1; contador > 0; contador--){
+                   document.getElementById('lista').deleteRow(contador);
+               }
+
+               createList(resp);
             }
             
         } else {
