@@ -1,5 +1,5 @@
 # CRUD-nodeJS
-An evaluative project made for the subject of Authoring and Multimedia II of the college course on Systems and Digital Media at the Federal University of Ceará (UFC).)
+An evaluative project made for the subject of Authoring and Multimedia II of the college course named Systems and Digital Media at the Federal University of Ceará (UFC).)
 
 > Código pertence originalmente ao professor [Wellington Sarmento](https://github.com/wwagner33)
 
