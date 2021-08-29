@@ -384,26 +384,3 @@ function createList(resp){
         tbody.appendChild(tr);
     });
 }
-
-function removeList(){
-    //Não sei o que fazer ainda, mas a ideia é aqui apagar a lista ja criada e dai criar uma nova listagem
-    //document.getElementById('Listagem').deleteRow(i)
-
-    const http = new XMLHttpRequest(); 
-    const urls= '/list/remove';
-
-    http.open("GET", urls, true); 
-    http.setRequestHeader('Content-Type','application/json'); 
-
-    http.send();
-
-    //Não to conseguindo pegar o tamanho do vetor de usuario
-    http.onload = ()=>{                
-        if (http.status === 200) {
-            var resp = JSON.parse(http.response);
-            console.log(resp);
-        } else {
-            console.log(`Erro no remove list. nao ta  voltando 200: ${http.status}`); 
-        } 
-    }   
-}
