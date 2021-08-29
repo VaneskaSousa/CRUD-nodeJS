@@ -81,15 +81,6 @@ router.post('/cadastro/remove',(req,res)=>{
     
 });
 
-router.post('/list/remove',(res)=>{ 
-    if(users.length == 0){
-        console.log("Não há nada a ser mostrado ou deletado");
-    }else{
-        res.send(JSON.stringify(users.length));
-        res.sendStatus(200);
-    }
-});
-
 router.post('/cadastro/update',(req,res)=>{
     //substitui os valores armazenados no item do vetror dado por id, por valores fornecidos como parametro vindos do navegador.
     //recebe dados do cliente na forma de um objeto JSON
